@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TornadoTok</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Inter, sans-serif;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    /* Background video */
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+    /* Dark overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+    header {
+      padding: 40px 20px 20px;
+    }
+    .watermark {
+      font-size: 13px;
+      color: #bbb;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 46px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 10px 0 40px;
+      color: #ddd;
+    }
+    .mentions {
+      max-width: 900px;
+      margin: 0 auto 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      padding: 0 20px;
+    }
+    .mentions a {
+      display: block;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 15px;
+      transition: all 0.2s ease;
+    }
+    .mentions a:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+    .more {
+      color: red;
+      font-weight: bold;
+      margin: 20px 0 40px;
+      font-size: 18px;
+    }
+    .news {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      text-align: left;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .news h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .news-item {
+      font-size: 15px;
+      margin: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 6px;
+    }
+    .date {
+      color: #ccc;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 3 Background videos -->
+  <video class="bg-video" id="video1" muted></video>
+  <video class="bg-video" id="video2" muted></video>
+  <video class="bg-video" id="video3" muted></video>
+  <div class="overlay"></div>
+
+  <header>
+    <div class="watermark">Made by CorrelationWX</div>
+    <h1>Welcome to TornadoTok</h1>
+    <h2>The TikTok Community of Tornado Editors and Tornado Chasers</h2>
+  </header>
+
+  <div class="mentions">
+    <a href="https://www.tiktok.com/@futurestormchaser" target="_blank">@futurestormchaser</a>
+    <a href="https://www.tiktok.com/@tahpwx" target="_blank">@tahpwx</a>
+    <a href="https://www.tiktok.com/@twx_wx" target="_blank">@twx_wx</a>
+    <a href="https://www.tiktok.com/@goldsbywx408" target="_blank">@goldsbywx408</a>
+    <a href="https://www.tiktok.com/@mcd_wx" target="_blank">@mcd_wx</a>
+    <a href="https://www.tiktok.com/@luk3dnado" target="_blank">@luk3dnado</a>
+    <a href="https://www.tiktok.com/@bell_70wx" target="_blank">@bell_70wx</a>
+    <a href="https://www.tiktok.com/@tw1sterrrs2" target="_blank">@tw1sterrrs2</a>
+    <a href="https://www.tiktok.com/@vanillawastaken" target="_blank">@vanillawastaken</a>
+    <a href="https://www.tiktok.com/@santak_poe_wx" target="_blank">@santak_poe_wx</a>
+    <a href="https://www.tiktok.com/@whirlmedia" target="_blank">@whirlmedia</a>
+    <a href="https://www.tiktok.com/@storm_chaserbrazil" target="_blank">@storm_chaserbrazil</a>
+    <a href="https://www.tiktok.com/@pnrztd" target="_blank">@pnrztd</a>
+    <a href="https://www.tiktok.com/@viper_ce" target="_blank">@viper_ce</a>
+    <a href="https://www.tiktok.com/@qua2arnado" target="_blank">@qua2arnado</a>
+    <a href="https://www.tiktok.com/@snake.wx" target="_blank">@snake.wx</a>
+    <a href="https://www.tiktok.com/@emdeeteewx" target="_blank">@emdeeteewx</a>
+    <a href="https://www.tiktok.com/@goldsbyef4" target="_blank">@goldsbyef4</a>
+    <a href="https://www.tiktok.com/@rotornadoes.edit" target="_blank">@rotornadoes.edit</a>
+    <a href="https://www.tiktok.com/@frenchtornadoes" target="_blank">@frenchtornadoes</a>
+  </div>
+
+  <div class="more">I WILL ADD MORE!!!!</div>
+
+  <div class="news">
+    <h3>News & Articles</h3>
+    <div class="news-item">
+      <span class="date">Sept 30, 2025</span>
+      Tornadotok is really tuff</a> 
+    </div>
+    <div class="news-item">
+      <span class="date">Sept 28, 2025</span>
+      <a href="https://www.tiktok.com/@qua2arnado">@qua2arnado</a>  posted a Pilger Twins EF-4 edit</a>.
+    </div>
+  </div>
+
+  <script>
+    const videos = [
+      {id: "video1", src: "tornado1.mp4"},
+      {id: "video2", src: "tornado2.mp4"},
+	];
+
+    let current = 0;
+
+    function playVideo(index) {
+      const video = document.getElementById(videos[index].id);
+      video.src = videos[index].src;
+      video.style.opacity = 1;
+      video.play();
+
+      video.onended = () => {
+        video.style.opacity = 0;
+        current = (index + 1) % videos.length;
+        setTimeout(() => playVideo(current), 1500); // počkaj na fade
+      };
+    }
+
+    // Start playlist
+    playVideo(current);
+  </script>
+</body>
+</html>
